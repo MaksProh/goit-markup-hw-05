@@ -27,6 +27,8 @@
   color: var(--black-text);
   font-size: 14px;
   line-height: 1.14;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .nav .link:hover,
@@ -55,6 +57,8 @@
   color: var(--white-text);
   font-size: 14px;
   line-height: 1.71;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .contacts-nav .mail:hover,
@@ -81,6 +85,8 @@
   font-size: 14px;
   line-height: 1.14;
   color: var(--grey-text);
+
+  transition: color 250ms var(--timing-function);
 }
 
 .contacts-nav .pfone {
@@ -90,6 +96,8 @@
   font-weight: 500;
   font-size: 14px;
   color: var(--grey-text);
+
+  transition: color 250ms var(--timing-function);
 }
 
 .contacts-footer .mail,
@@ -98,6 +106,8 @@
   font-size: 14px;
   line-height: 1.71;
   color: var(--white-transparent-text);
+
+  transition: color 250ms var(--timing-function);
 }
 
 .fon-footer {
@@ -269,6 +279,10 @@ h2 {
 
 .footer-links {
   margin-left: 70px;
+}
+
+.link-footer:not(:last-child) {
+  margin-right: 10px;
 }
 
 .connect {

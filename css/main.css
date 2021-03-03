@@ -252,11 +252,9 @@ h1 {
 /* ИКОНКИ СОЦ.СЕТЕЙ В КАРТОЧКАХ КОМАНДЫ */
 
 .social-list {
-  width: 206px;
   padding: 0;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .icon-link {
@@ -264,37 +262,38 @@ h1 {
   height: 20px;
   fill: var(--color-link);
   padding: 12px 12px;
+
+  transition: fill 250ms var(--timing-function);
 }
 
-.item-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+.social-link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+}
+
+.item-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
   color: var(--white-text);
   background-color: var(--white-text);
+
+  transition: background-color 250ms var(--timing-function);
 }
 
-.item-link:hover {
-  background-color: var(--blu-text);
-}
-
+.item-link:hover,
 .item-link:focus {
   background-color: var(--blu-text);
 }
 
-.icon-link:hover {
+.item-link:hover .icon-link,
+.item-link:focus .icon-link {
   fill: currentColor;
 }
 
-.icon-link:focus {
-  fill: currentColor;
-}
-
-/* ИКОНКИ ДЛЯ ПОСТОЯННЫХ КЛИЕНТОВ */
+/* ПОСТОЯННЫT КЛИЕНТЫ */
 
 .container-clients {
   padding-top: 94px;
@@ -317,9 +316,8 @@ h1 {
 .clients-list {
   margin: 0;
   padding: 0;
-  display: inline-flex;
-
-  width: calc((100% - 150px) / 6);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .clients-item:nth-child(6n) {
@@ -327,87 +325,92 @@ h1 {
 }
 
 .clients-item {
+  width: 170px;
+  height: 90px;
+  flex-basis: calc((100% - 150px) / 6);
   margin-right: 30px;
 }
 
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid var(--blu-text);
   color: var(--blu-text);
 }
 
 .clients-link {
-  padding: 0;
-  margin: 0;
   display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 90px;
   border: 1px solid var(--color-link);
+
+  transition: border 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
 
 .icon-yaco {
-  padding-top: 20px;
-  padding-bottom: 20.77px;
-  padding-left: 63px;
-  padding-right: 62.73px;
   width: 44.27px;
   height: 49.23px;
   fill: var(--color-link);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .icon-tagline {
-  padding: 19px 65px;
   width: 40px;
   height: 52px;
   fill: var(--color-link);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .icon-company {
-  padding-top: 24px;
-  padding-bottom: 23.4px;
-  padding-left: 65px;
-  padding-right: 64px;
   width: 41px;
   height: 42.6px;
   fill: var(--color-link);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .icon-brand {
   width: 59px;
   height: 47px;
-  padding-top: 22px;
-  padding-bottom: 21px;
-  padding-left: 56px;
-  padding-right: 55px;
   fill: var(--color-link);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .icon-foster {
   width: 79.66px;
   height: 42.02px;
-  padding-top: 24px;
-  padding-bottom: 23.98px;
-  padding-left: 45px;
-  padding-right: 45.34px;
   fill: var(--color-link);
+
+  transition: fill 250ms var(--timing-function);
 }
 
 .icon-ctl {
   width: 88.48px;
   height: 45.44px;
-  padding-top: 22px;
-  padding-bottom: 22.56px;
-  padding-left: 41px;
-  padding-right: 40.52;
   fill: var(--color-link);
+
+  transition: fill 250ms var(--timing-function);
 }
 
-.icon-yaco:hover,
-.icon-tagline:hover,
-.icon-company:hover,
-.icon-ctl:hover,
-.icon-foster:hover,
-.icon-brand:hover {
+.clients-link:hover .icon-yaco,
+.clients-link:hover .icon-tagline,
+.clients-link:hover .icon-company,
+.clients-link:hover .icon-ctl,
+.clients-link:hover .icon-foster,
+.clients-link:hover .icon-brand {
+  fill: currentColor;
+}
+
+.clients-link:focus .icon-yaco,
+.clients-link:focus .icon-tagline,
+.clients-link:focus .icon-company,
+.clients-link:focus .icon-ctl,
+.clients-link:focus .icon-foster,
+.clients-link:focus .icon-brand {
   fill: currentColor;
 }
