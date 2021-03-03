@@ -15,6 +15,7 @@
   --color-border-portfolio: #eeeeee;
   --border-close: rgba(0, 0, 0, 0.1);
   --background-modal: rgba(0, 0, 0, 0.2);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav .link {
@@ -123,8 +124,10 @@ button {
   text-decoration: none;
 }
 
-.item-studio::after {
+.link-item::after {
   position: absolute;
+  left: 0;
+  bottom: 0;
   content: '';
 
   width: 100%;
@@ -133,17 +136,15 @@ button {
   background-color: var(--blu-text);
 
   opacity: 0;
+  transition: opacity 250ms var(--timing-function);
 }
 
-.item-studio:hover::after {
+.link-item:hover::after,
+.link-item:focus::after {
   opacity: 1;
 }
 
 .item-studio {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-
   position: relative;
 }
 
