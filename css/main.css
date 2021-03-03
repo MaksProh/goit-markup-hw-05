@@ -282,7 +282,15 @@ h1 {
   background-color: var(--blu-text);
 }
 
+.item-link:focus {
+  background-color: var(--blu-text);
+}
+
 .icon-link:hover {
+  fill: currentColor;
+}
+
+.icon-link:focus {
   fill: currentColor;
 }
 

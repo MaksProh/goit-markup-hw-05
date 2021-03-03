@@ -13,6 +13,8 @@
   --color-link: #afb1b8;
   --backgrouund-links-footer: rgba(255, 255, 255, 0.1);
   --color-border-portfolio: #eeeeee;
+  --border-close: rgba(0, 0, 0, 0.1);
+  --background-modal: rgba(0, 0, 0, 0.2);
 }
 
 .nav .link {
@@ -246,11 +248,6 @@ h2 {
   height: 12px;
   display: block;
   margin-right: 10px;
-  fill: currentColor;
-}
-
-.icon-mail:hover,
-.icon-tel:hover {
   fill: currentColor;
 }
 
