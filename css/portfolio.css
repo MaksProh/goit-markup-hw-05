@@ -11,6 +11,8 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--black-text);
+
+  transition: color 250ms var(--timing-function);
 }
 
 .btn:hover,
@@ -62,6 +64,7 @@ body {
   margin: 0;
 }
 
+/* НАШИ ПРОЕКТЫ */
 .fon {
   position: relative;
 }
@@ -87,6 +90,11 @@ body {
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
+
+  transform: translateY(100%);
+
+  transition: opacity 250ms var(--timing-function),
+    transform 250ms var(--timing-function);
 }
 
 .style-text {
@@ -97,6 +105,7 @@ body {
 
 .project-item:hover .project-text {
   opacity: 1;
+  transform: translateX(0);
 }
 
 /* .project-photo::before {

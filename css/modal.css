@@ -28,7 +28,7 @@
 }
 
 .close {
-  display: inline-block;
+  display: flex;
   padding: 0;
 
   width: 30px;
@@ -38,8 +38,12 @@
   margin-left: auto;
   margin-top: 8px;
   margin-right: 8px;
+  justify-content: center;
+  align-items: center;
   background-color: var(--white-text);
-  background-image: url(../img/icons/close.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
+}
+
+.modal-svg {
+  width: 18px;
+  height: 18px;
 }
