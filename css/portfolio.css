@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+.container-border {
+  border-bottom: 1px solid var(--border-nav-portfolio);
+}
+
 .filtr .btn {
   padding: 6px 22px;
   border-radius: 4px;

@@ -47,7 +47,18 @@
   margin-right: 8px;
   justify-content: center;
   align-items: center;
+  color: var(--white-text);
   background-color: var(--white-text);
+
+  transition: background-color 250ms var(--timing-function);
+}
+
+.close:hover {
+  background-color: var(--blu-text);
+}
+
+.close:hover .modal-svg {
+  fill: currentColor;
 }
 
 .modal-svg {

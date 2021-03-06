@@ -92,10 +92,13 @@ h1 {
 
 .list-advantages {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .list-advantages .item {
-  width: calc((100% - 60px) / 4);
+  display: block;
+  width: 270px;
+  flex-basis: calc((100% - 60px) / 4);
 }
 
 .list-advantages .item:not(:last-child) {
@@ -108,6 +111,8 @@ h1 {
 }
 
 .container-icon {
+  display: inline-block;
+  width: inherit;
   height: 120px;
   background-color: var(--background-advantages);
   border-radius: 4px;
